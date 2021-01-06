@@ -12,22 +12,22 @@ General collaboration tips:
 
 At a high level, git allows you to work on a project while creating "commit"s, or in plain english, checkpoints. Teams use git so that people on work on the same codebase (files and directories) concurrently. Think google docs but not real-time.
 
-Assuming you know basic git knowledge like `git pull`, `git commit -m '<message>'`, and `git push origin master`, here's some other tips.
+Assuming you know basic git knowledge like `git pull`, `git commit -m '<message>'`, and `git push origin main`, here's some other tips.
 
 - Commit early and often. This is the main "checkpoint" mechanism when coding. Doing a lot of commits has no downsides, but not committing enough could bite you if you ended up writing code that you now need to undo.
-- Lots of teams use pull-requests and code reviews rather than pushing directly to the "master" branch. This lets you show your teammates a draft of your code before you submit it to the project. Whenever you start working in a professional environment, this will likely be the workflow
+- Lots of teams use pull-requests and code reviews rather than pushing directly to the "main" branch. This lets you show your teammates a draft of your code before you submit it to the project. Whenever you start working in a professional environment, this will likely be the workflow
 - Try and make use of pre-commit (https://pre-commit.com/) to make some work automated. A really useful thing would be to use a formatter so all code in your project is always formatted (https://github.com/psf/black#version-control-integration).
 
 ## Git branches
-A git branch is a copy of the code you're working on that is edited separately of other branches. All projects have a "master" branch, but most people work on branches other than "master" while coding.
+A git branch is a copy of the code you're working on that is edited separately of other branches. All projects have a "main" branch, but most people work on branches other than "master" while coding.
 
 To create a branch, `git checkout -b <branch_name>`.
 
 This will create a new branch that is a copy of the original branch you were on when creating. A common workflow would be:
 
 ```
-git checkout master
-git pull origin master
+git checkout main
+git pull origin main
 git checkout -b <branch_name>
 ```
 
